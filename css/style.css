@@ -14,6 +14,10 @@
 }
 h1,h2,h3,h4,p{margin: 0;}
 
+img{display: block;
+max-width: 100%;
+height: auto;}
+
 ul{
     list-style: none;
     margin: 0;
@@ -38,6 +42,11 @@ body {
 
 ---------- */
 
+/* class to all sections ==> */
+.section{
+    padding: 94px 0;
+}
+
 
 .container{
     margin-left: auto;
@@ -53,8 +62,12 @@ body {
 /* 
 =====> header
  */
- .container.header{
-     border: 1px solid var(--header-bgc);
+ .header {
+     border-bottom: 1px solid var(--header-bgc);
+ }
+ .header .container{
+     display: flex;
+
  }
 .head-nav{
     display: flex;
@@ -62,8 +75,6 @@ body {
     
 }
 .logo{
-    margin-right: 93px;
-    
     color:  var(--accent-color);
 
     text-decoration: none;
@@ -80,8 +91,8 @@ body {
 
 .header-list{
     display: flex;
-    margin-right: auto;
-}
+    margin-left: 93px;
+    }
 .header-list .item:not(:last-child){
     margin-right: 50px;
 }
@@ -108,7 +119,7 @@ body {
 
 .header-address{
     display: flex;
-    /* margin-left: auto; */
+    margin-left: auto;
     
 }
 .header-address .item:not(:last-child){
@@ -117,8 +128,7 @@ body {
 
 .address{
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+  
 
     color: var(--primary-text-color);
     text-decoration: none;
@@ -128,6 +138,10 @@ body {
     line-height: 1.14;
     letter-spacing: 0.02em;
     font-style: normal;
+}
+.header-address .address{
+    padding-top: 32px;
+    padding-bottom: 32px;
 }
 
 .address:hover,
@@ -183,24 +197,31 @@ body {
     letter-spacing: 0.06em;
     
 }
+/* 
+====>sec slogans 
+*/
+.vis-hid{
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 0;
+    height: 0;
+    margin: -1px;
+}
+
 
 /* 
-====>sec what doing 
+====>sec what doing sec
 */
-
-.section{
-    padding: 94px 0;
+.section-what-doing{
+    padding-top: 0;
 }
-
 .what-doing-list{
     display: flex;
-   
-    margin-bottom: 94px;
+ }
+.what-doing-list .text{
+    width: 270px;
 }
 
-.what-doing-item{
-    width: 270px;
-}  
 .what-doing-list .item:not(:last-child){
     margin-right: 30px;
 }
@@ -247,8 +268,7 @@ body {
 }
 .our-team-names{
     margin-bottom: 10px;
-    margin-top: 30px;
-
+   
     color: var(--title-color);
 
     font-weight: 500;
@@ -257,14 +277,16 @@ body {
 }
 .our-team-card{
     background-color: var(--body-bgc);
-    min-height: 368px ;
+    
     text-align: center;
-    /* margin-right: 30px; */
+    
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
-
+.under-card{
+    padding: 30px 0;
+}
 
 .our-team .list{
     display: flex;
@@ -298,35 +320,31 @@ body {
 .address-map:focus{
     color: var(--accent-color);
 }
-.footer .container{
+.footer{
     padding-top: 60px;
     padding-bottom: 60px;
 }
 .footer-address-section{
     margin-top: 20px;
 }
-.footer .address{
-    padding-bottom: 0;
-    padding-top: 9px;
+/* .address.footer{
+    padding: 0;
+} */
+
+.address-item{
+    margin-top: 9px;
 }
+
 
 /* -------- 
 =====>Portfolio
 ---------- */
 
-.main-portfolio {
-    background-color: var(--body-bgc);
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
 
-.unvis-title{
-    display: none;}
-.buttons{
-  
-    margin-bottom: 50px;
-}
+
+
 .buttons-list{
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
 }
@@ -387,35 +405,26 @@ body {
 }
 
 .border-container{
-    margin-top: -8px;
-    padding-bottom: 20px;
+    padding: 20px 24px;
     border: 1px solid var(--border-col);
     border-top: none;
 }
 
 
 .portfolio-name-project{
-    margin-right: 0;
-   margin-top: 0px;
+ 
    margin-bottom: 4px;
-   margin-left: 24px;
+   
 
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
 
-    
-
     color: var(--title-color);
 }
 
 .portfolio-what-project{
-    margin-right: 0;
-    margin-bottom: 20px;
-    margin-left: 24px;
-  
-    font-style: normal;
     font-size: 16px;
     line-height: 1.88;
 
